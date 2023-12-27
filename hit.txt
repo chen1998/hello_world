@@ -1,1 +1,20 @@
 ERROR: Directory 'D:/Project/lib' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+
+(mqc_web) D:\Project\mqc_web>python -m pip install --upgrade D:\Project\mqc_web\Lib\site-packages\setuptools-69.0.3.tar.gz
+Processing d:\project\mqc_web\lib\site-packages\setuptools-69.0.3.tar.gz
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... error
+  ERROR: Command errored out with exit status 1:
+   command: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel
+       cwd: None
+  Complete output (7 lines):
+  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F573F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
+  WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F588A10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
+  WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F589450>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
+  WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F589ED0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
+  WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F58A910>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
+  ERROR: Could not find a version that satisfies the requirement wheel (from versions: none)
+  ERROR: No matching distribution found for wheel
+  ----------------------------------------
+WARNING: Discarding file:///D:/Project/mqc_web/Lib/site-packages/setuptools-69.0.3.tar.gz. Command errored out with exit status 1: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel Check the logs for full command output.
+ERROR: Command errored out with exit status 1: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel Check the logs for full command output.
