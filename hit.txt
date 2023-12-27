@@ -1,20 +1,96 @@
-ERROR: Directory 'D:/Project/lib' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
-
-(mqc_web) D:\Project\mqc_web>python -m pip install --upgrade D:\Project\mqc_web\Lib\site-packages\setuptools-69.0.3.tar.gz
-Processing d:\project\mqc_web\lib\site-packages\setuptools-69.0.3.tar.gz
-  Getting requirements to build wheel ... done
-  Installing backend dependencies ... error
+(mqc_web) C:\Users\ruby\python\mqc_web>pip install C:\Users\ruby\python\mqc_web\Lib\site-packages\psutil-5.9.0.tar.gz
+Processing c:\users\ruby\python\mqc_web\lib\site-packages\psutil-5.9.0.tar.gz
+Building wheels for collected packages: psutil
+  Building wheel for psutil (setup.py) ... error
   ERROR: Command errored out with exit status 1:
-   command: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel
-       cwd: None
-  Complete output (7 lines):
-  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F573F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
-  WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F588A10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
-  WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F589450>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
-  WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F589ED0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
-  WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001EA6F58A910>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/wheel/
-  ERROR: Could not find a version that satisfies the requirement wheel (from versions: none)
-  ERROR: No matching distribution found for wheel
+   command: 'C:\Users\ruby\python\mqc_web\Scripts\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"'; __file__='"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d 'C:\Users\ruby\AppData\Local\Temp\5\pip-wheel-6lz1yk0r'
+       cwd: C:\Users\ruby\AppData\Local\Temp\5\pip-req-build-6orpy30y\
+  Complete output (38 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win-amd64-3.11
+  creating build\lib.win-amd64-3.11\psutil
+  copying psutil\_common.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_compat.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_psaix.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_psbsd.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_pslinux.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_psosx.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_psposix.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_pssunos.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\_pswindows.py -> build\lib.win-amd64-3.11\psutil
+  copying psutil\__init__.py -> build\lib.win-amd64-3.11\psutil
+  creating build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\runner.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_aix.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_bsd.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_connections.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_contracts.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_linux.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_memleaks.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_misc.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_osx.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_posix.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_process.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_sunos.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_system.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_testutils.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_unicode.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\test_windows.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\__init__.py -> build\lib.win-amd64-3.11\psutil\tests
+  copying psutil\tests\__main__.py -> build\lib.win-amd64-3.11\psutil\tests
+  running build_ext
+  building 'psutil._psutil_windows' extension
+  error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
   ----------------------------------------
-WARNING: Discarding file:///D:/Project/mqc_web/Lib/site-packages/setuptools-69.0.3.tar.gz. Command errored out with exit status 1: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel Check the logs for full command output.
-ERROR: Command errored out with exit status 1: 'D:\Project\mqc_web\Scripts\python.exe' 'C:\Users\ruby\AppData\Local\Temp\5\pip-standalone-pip-4of9161t\__env_pip__.zip\pip' install --ignore-installed --no-user --prefix 'C:\Users\ruby\AppData\Local\Temp\5\pip-build-env-b8g418ur\normal' --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- wheel Check the logs for full command output.
+  ERROR: Failed building wheel for psutil
+  Running setup.py clean for psutil
+Failed to build psutil
+Installing collected packages: psutil
+    Running setup.py install for psutil ... error
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\ruby\python\mqc_web\Scripts\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"'; __file__='"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\ruby\AppData\Local\Temp\5\pip-record-lsub0kf_\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\ruby\python\mqc_web\include\site\python3.11\psutil'
+         cwd: C:\Users\ruby\AppData\Local\Temp\5\pip-req-build-6orpy30y\
+    Complete output (38 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build\lib.win-amd64-3.11
+    creating build\lib.win-amd64-3.11\psutil
+    copying psutil\_common.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_compat.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_psaix.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_psbsd.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_pslinux.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_psosx.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_psposix.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_pssunos.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\_pswindows.py -> build\lib.win-amd64-3.11\psutil
+    copying psutil\__init__.py -> build\lib.win-amd64-3.11\psutil
+    creating build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\runner.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_aix.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_bsd.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_connections.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_contracts.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_linux.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_memleaks.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_misc.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_osx.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_posix.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_process.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_sunos.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_system.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_testutils.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_unicode.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\test_windows.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\__init__.py -> build\lib.win-amd64-3.11\psutil\tests
+    copying psutil\tests\__main__.py -> build\lib.win-amd64-3.11\psutil\tests
+    running build_ext
+    building 'psutil._psutil_windows' extension
+    error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: 'C:\Users\ruby\python\mqc_web\Scripts\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"'; __file__='"'"'C:\\Users\\ruby\\AppData\\Local\\Temp\\5\\pip-req-build-6orpy30y\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\ruby\AppData\Local\Temp\5\pip-record-lsub0kf_\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\ruby\python\mqc_web\include\site\python3.11\psutil' Check the logs for full command output.
