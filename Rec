@@ -1,0 +1,19 @@
+def rectangle_corners(xp, yp, W, H):
+    left_top = (xp - W/2, yp + H/2)
+    right_top = (xp + W/2, yp + H/2)
+    left_bottom = (xp - W/2, yp - H/2)
+    right_bottom = (xp + W/2, yp - H/2)
+    
+    return left_top, right_top, left_bottom, right_bottom
+
+# 使用範例
+xp = 0  # 矩形中點 x 座標
+yp = 0  # 矩形中點 y 座標
+W = 4   # 矩形長度
+H = 2   # 矩形寬度
+
+corners = rectangle_corners(xp, yp, W, H)
+print("左上角座標:", corners[0])
+print("右上角座標:", corners[1])
+print("左下角座標:", corners[2])
+print("右下角座標:", corners[3])
