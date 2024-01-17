@@ -17,3 +17,6 @@ print("左上角座標:", corners[0])
 print("右上角座標:", corners[1])
 print("左下角座標:", corners[2])
 print("右下角座標:", corners[3])
+filtered_df = df1[(df1['SX'] >= (xp - W/2)) & (df1['SX'] <= (xp + W/2)) & (df1['SY'] >= (yp - H/2)) & (df1['SY'] <= (yp + H/2))]
+
+print(filtered_df)
