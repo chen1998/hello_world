@@ -1,69 +1,9 @@
-FORMDATA格式如下:
-                   X              Y       CD1       CD2       OV1       OV2  \
-POINT                                                                         
-1     -905510.147205  720773.341231  2.917719  6.741379 -0.128703  0.349492   
-2     -905511.908999  656437.261541  2.876699  6.819728 -0.092317  0.157890   
-3     -905513.701035  620074.167659  2.716785  6.764023  0.003639 -0.023739   
-4     -905513.815175  555737.787238  2.655646  6.868358  0.018327  0.154358   
-5     -905512.695816  513779.738384  2.852810  6.791208 -0.043266  0.105612   
-6     -905514.786367  443850.172055  2.911746  6.804941 -0.120589  0.125108   
-7     -905512.450993  408886.668058  2.867706  6.725138 -0.015430  0.228709   
-8     -905514.191896  340532.854068  2.733924  6.879502 -0.014794  0.234332   
-9     -905516.020590  305567.397204  2.854995  6.801444  0.009700  0.065670   
-10    -905514.446923  235637.367151  2.744927  6.909751 -0.063548  0.037696   
-
-      Sys point judge   SCAN   XP_diff       YP_diff CHIP      DOLX Judge1  \
-POINT                                                                        
-1                  OK  SCAN6       NaN           NaN    1       NaN     OK   
-2                  OK  SCAN6 -1.761794 -64336.079690    1  0.036386     OK   
-3                  OK  SCAN6 -1.792036 -36363.093882    1  0.095956     OK   
-4                  OK  SCAN6 -0.114140 -64336.380421    1  0.014688     OK   
-5                  OK  SCAN6  1.119359 -41958.048854    1 -0.061593     OK   
-6                  OK  SCAN6 -2.090551 -69929.566329    1 -0.077323     OK   
-7                  OK  SCAN6  2.335374 -34963.503997    1  0.105159     OK   
-8                  OK  SCAN6 -1.740903 -68353.813990    1  0.000636     OK   
-9                  OK  SCAN6 -1.828694 -34965.456864    1  0.024494     OK   
-10                 OK  SCAN6  1.573667 -69930.030053    1 -0.073248     OK   
-
-           DOLY Judge2 Average_CD  Delta_CD  
-POINT                                        
-1           NaN     OK          x         x  
-2     -0.191602     OK   2.897209         x  
-3     -0.181629     OK          x  2.791712  
-4      0.178097     OK   2.686215         x  
-5     -0.048746     OK          x  2.784247  
-6      0.019496     OK   2.882278         x  
-7      0.103601     OK          x  2.841546  
-8      0.005623     OK   2.800815         x  
-9     -0.168662     OK          x  2.800388  
-10    -0.027974     OK   2.799961         x  
-1.畫圖,子圖三張 x軸都為FORMFATA.index y軸分別為DOLX、DOLY、Delta_CD ,鱉祭出0.4,-0.4,0.6,-0.6的judge線
-
-
-import matplotlib.pyplot as plt
-
-# 創建一個包含三張子圖的畫布
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
-
-# 第一張子圖: DOLX
-ax1.plot(FORMDATA.index, FORMDATA['DOLX'], label='DOLX')
-ax1.axhline(0.4, color='r', linestyle='--', label='Judge Line +0.4')
-ax1.axhline(-0.4, color='r', linestyle='--', label='Judge Line -0.4')
-ax1.legend()
-
-# 第二張子圖: DOLY
-ax2.plot(FORMDATA.index, FORMDATA['DOLY'], label='DOLY')
-ax2.axhline(0.6, color='r', linestyle='--', label='Judge Line +0.6')
-ax2.axhline(-0.6, color='r', linestyle='--', label='Judge Line -0.6')
-ax2.legend()
-
-# 第三張子圖: Delta_CD
-ax3.plot(FORMDATA.index, FORMDATA['Delta_CD'], label='Delta_CD')
-ax3.axhline(0, color='r', linestyle='--', label='Judge Line 0')
-ax3.legend()
-
-# 設定整體標題
-fig.suptitle('DOLX, DOLY, Delta_CD vs FORMDATA.index')
-
-# 顯示畫布
-plt.show()
+        for cl,ix,ax,name in zip(["DOLX","DOLY","Delta_CD"],range(1,4,1),[ax1, ax2, ax3],["DOLX","DOLY","DCD"]) :
+            XP,YP = point_clean(FD,ixl,[v for v in FD[cl]],fix10)
+            #print(YP)
+            ax.plot(XP,YP, label=name, color=colors[ix])
+            ax.scatter(XP,YP,color=colors[ix] ) #label = rowdata['SCAN'][ix]
+            for judge in [-0.4,0.4,-0.6,0.6]:
+                ax.axhline(judge, color='r', linestyle='--', label='Judge Line -%s'%str(judge))
+            ax.axis(ymin =-2  , ymax =2)
