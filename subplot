@@ -38,3 +38,32 @@ POINT
 9     -0.168662     OK          x  2.800388  
 10    -0.027974     OK   2.799961         x  
 1.畫圖,子圖三張 x軸都為FORMFATA.index y軸分別為DOLX、DOLY、Delta_CD ,鱉祭出0.4,-0.4,0.6,-0.6的judge線
+
+
+import matplotlib.pyplot as plt
+
+# 創建一個包含三張子圖的畫布
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
+
+# 第一張子圖: DOLX
+ax1.plot(FORMDATA.index, FORMDATA['DOLX'], label='DOLX')
+ax1.axhline(0.4, color='r', linestyle='--', label='Judge Line +0.4')
+ax1.axhline(-0.4, color='r', linestyle='--', label='Judge Line -0.4')
+ax1.legend()
+
+# 第二張子圖: DOLY
+ax2.plot(FORMDATA.index, FORMDATA['DOLY'], label='DOLY')
+ax2.axhline(0.6, color='r', linestyle='--', label='Judge Line +0.6')
+ax2.axhline(-0.6, color='r', linestyle='--', label='Judge Line -0.6')
+ax2.legend()
+
+# 第三張子圖: Delta_CD
+ax3.plot(FORMDATA.index, FORMDATA['Delta_CD'], label='Delta_CD')
+ax3.axhline(0, color='r', linestyle='--', label='Judge Line 0')
+ax3.legend()
+
+# 設定整體標題
+fig.suptitle('DOLX, DOLY, Delta_CD vs FORMDATA.index')
+
+# 顯示畫布
+plt.show()
