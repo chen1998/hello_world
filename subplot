@@ -7,3 +7,4 @@ fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
             for judge in [-0.4,0.4,-0.6,0.6]:
                 ax.axhline(judge, color='r', linestyle='--', label='Judge Line -%s'%str(judge))
             ax.axis(ymin =-2  , ymax =2)
+colors = ['red', 'blue', 'green', 'orange', 'purple', 'brown', 'pink', 'gray', 'yellow', 'cyan', 'lightblue', 'lightcoral', 'lightgreen', 'lightpink', 'lavender', 'rosybrown']
