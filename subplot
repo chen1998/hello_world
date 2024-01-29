@@ -41,3 +41,19 @@ normalized_arr = (arr - min_val) / (max_val - min_val)
 normalized_list1 = 1 + normalized_arr * 9
 
 print(normalized_list1)
+
+df如下
+    POINT              X              Y   LENS CHIP   SCAN
+1       1 -887238.350164  706009.912501     M6    1  SCAN9
+2       2 -887238.839033  658422.850732  M5_M6    1  SCAN9
+3       3 -887239.740264  635580.790243     M5    1  SCAN9
+4       4 -887238.397391  553095.411068  M4_M5    1  SCAN9
+5       5 -887238.678054  530253.444913     M4    1  SCAN9
+6       6 -887239.171815  447768.851578  M3_M4    1  SCAN9
+7       7 -887237.925300  424926.784639     M3    1  SCAN9
+8       8 -887238.895892  342441.910593  M2_M3    1  SCAN9
+9       9 -887238.008274  319600.092223     M2    1  SCAN9
+10     10 -887237.776489  273916.219230     M2    1  SCAN9
+
+將Y軸正則在[1,len(df)-1],畫散點圖x軸為[-10,10]*int(len(正則y list)/2),Y軸為正則y list
+每點label為[LENS]
