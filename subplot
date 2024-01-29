@@ -57,3 +57,23 @@ df如下
 
 將Y軸正則在[1,len(df)-1],畫散點圖x軸為[-10,10]*int(len(正則y list)/2),Y軸為正則y list
 每點label為[LENS]
+
+
+normalized_y = np.linspace(1, len(df) - 1, len(df))
+
+# 创建坐标图
+plt.scatter([-10, 10] * int(len(normalized_y) / 2), normalized_y, color='blue', marker='o')
+
+# 添加点的标签
+for i, txt in enumerate(df['LENS']):
+    plt.annotate(txt, ([-10, 10] * int(len(normalized_y) / 2))[i], textcoords="offset points", xytext=(0, 5), ha='center')
+
+# 添加坐标轴标签
+plt.xlabel('X Coordinate')
+plt.ylabel('Normalized Y Coordinate')
+
+# 添加标题
+plt.title('Scatter Plot with Normalized Y-axis')
+
+# 显示绘制的图
+plt.show()
