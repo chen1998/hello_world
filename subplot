@@ -8,3 +8,20 @@ fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
                 ax.axhline(judge, color='r', linestyle='--', label='Judge Line -%s'%str(judge))
             ax.axis(ymin =-2  , ymax =2)
 colors = ['red', 'blue', 'green', 'orange', 'purple', 'brown', 'pink', 'gray', 'yellow', 'cyan', 'lightblue', 'lightcoral', 'lightgreen', 'lightpink', 'lavender', 'rosybrown']
+
+
+        POINT              X              Y   LENS CHIP   SCAN
+1        1 -887238.350164  706009.912501     M6    1  SCAN9
+2        2 -887238.839033  658422.850732  M5_M6    1  SCAN9
+3        3 -887239.740264  635580.790243     M5    1  SCAN9
+4        4 -887238.397391  553095.411068  M4_M5    1  SCAN9
+5        5 -887238.678054  530253.444913     M4    1  SCAN9
+6        6 -887239.171815  447768.851578  M3_M4    1  SCAN9
+7        7 -887237.925300  424926.784639     M3    1  SCAN9
+8        8 -887238.895892  342441.910593  M2_M3    1  SCAN9
+9        9 -887238.008274  319600.092223     M2    1  SCAN9
+10      10 -887237.776489  273916.219230     M2    1  SCAN9
+11      11 -658183.850663  706009.853305     M6    2  SCAN9
+12      12 -658183.598945  658422.924615  M5_M6    2  SCAN9
+13      13 -658183.448631  635580.944370     M5    2  SCAN9
+14      14 -658182.137753  553095.365637  M4_M5    2  SCAN9
