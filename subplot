@@ -77,3 +77,8 @@ plt.title('Scatter Plot with Normalized Y-axis')
 
 # 显示绘制的图
 plt.show()
+
+
+colors_contrast = ['Red', 'Cyan', 'Orange', 'Teal', 'Yellow', 'Blue', 'Green', 'Magenta', 
+                   'Indigo', 'Olive', 'Violet', 'Coral', 'Pink', 'Peach', 'Brown', 'Plum', 
+                   'Maroon', 'Charcoal', 'Cyan', 'Turquoise', 'Silver', 'Lavender', 'Gray', 'Beige']
