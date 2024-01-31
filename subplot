@@ -114,4 +114,29 @@ colors_contrast = ['Red', 'Cyan', 'Orange', 'Teal', 'Yellow', 'Blue', 'Green', '
 x軸為Y列,Y軸為cd1列
 y軸的上下線為去掉最大最小值的平均值正負一
 軸刻度分割成20份顯示
+matrix_data = np.array([data['Y'], data['CD1']])
+
+# 計算y軸的上下線
+y_mean = np.mean(matrix_data[1])
+y_std = np.std(matrix_data[1])
+y_upper_bound = y_mean + y_std
+y_lower_bound = y_mean - y_std
+
+# 畫出散點圖
+plt.scatter(matrix_data[0], matrix_data[1])
+
+# 設定x軸和y軸的標籤
+plt.xlabel('Y')
+plt.ylabel('CD1')
+
+# 設定y軸的上下線
+plt.axhline(y=y_upper_bound, color='r', linestyle='--', label='Upper Bound')
+plt.axhline(y=y_lower_bound, color='g', linestyle='--', label='Lower Bound')
+
+# 顯示圖例
+plt.legend()
+
+# 顯示圖表
+plt.show()
+
 
