@@ -118,6 +118,49 @@ axs.plot(matrix_data)
 如果y軸最大值減最小值<3:上下線為最大值,最小值
 如果>3,上下線為y軸平均值+1.5,y軸平均值-1.5
 軸刻度為y軸上下限range分割為10等分顯示刻度
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# 假設你的資料存在 DataFrame 中，並已經讀取到 df 變數
+# 假設 "Y" 和 "CD1" 是 DataFrame 的兩個欄位
+
+# 提取 Y 和 CD1 欄位的數據
+y_values = df["Y"].values
+cd1_values = df["CD1"].values
+
+# 計算 y 軸的最大最小值
+y_min = np.min(y_values)
+y_max = np.max(y_values)
+
+# 計算 cd1 軸的最大最小值
+cd1_min = np.min(cd1_values)
+cd1_max = np.max(cd1_values)
+
+# 計算 y 軸上下線
+y_range = y_max - y_min
+if y_range < 3:
+    y_upper_bound = y_max
+    y_lower_bound = y_min
+else:
+    y_mean = np.mean(y_values)
+    y_upper_bound = y_mean + 1.5
+    y_lower_bound = y_mean - 1.5
+
+# 設定圖表
+fig, axs = plt.subplots()
+
+# 繪製散點圖
+axs.scatter(y_values, cd1_values)
+
+# 設定 y 軸上下線
+axs.set_ylim([y_lower_bound, y_upper_bound])
+
+# 設定 y 軸刻度
+y_ticks = np.linspace(y_lower_bound, y_upper_bound, 10)
+axs.set_yticks(y_ticks)
+
+# 顯示圖表
+plt.show()
 
 
