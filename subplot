@@ -254,6 +254,40 @@ Scan6	M1-M2
 	M4-M5
 	M5-M6
 	M6-M7
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+# 假設cldf是你的DataFrame
+# 這邊我使用了一個假設的範例
+data = {
+    'SCAN': ['SCAN6']*6 + ['SCAN5']*6 + ['SCAN3']*6 + ['SCAN4']*6 + ['SCAN2']*6 + ['SCAN1']*6,
+    'LENS': ['M67', 'M56', 'M45', 'M34', 'M23', 'M12']*6,
+    'RANGE': [0.023, 0.033, 0.034, 0.027, 0.045, 0.026, 0.02, 0.053, 0.013, 0.04, 0.029, 0.012, 0.023, 0.022, 0.038, 0.037, 0.019, 0.047, 0.013, 0.044, 0.016, 0.022, 0.056, 0.013, 0.036, 0.02, 0.027, 0.02, 0.014, 0.014, 0.024, 0.027, 0.019, 0.034, 0.043, 0.033]
+}
+
+cldf = pd.DataFrame(data)
+
+# 設置圖表
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# 使用seaborn的scatterplot和lineplot
+sns.scatterplot(data=cldf, x='LENS', y='RANGE', hue='SCAN', ax=ax)
+sns.lineplot(data=cldf, x='LENS', y='RANGE', hue='SCAN', ax=ax, markers=True, dashes=False)
+
+# 設置x軸刻度
+scan_labels = cldf['SCAN'].unique()
+lens_labels = cldf['LENS'].unique()
+
+x_ticks = []
+for scan_label in scan_labels:
+    for lens_label in lens_labels:
+        x_ticks.append(f'{scan_label}\n{scan_label[4:]}-{lens_label}')
+
+ax.set_xticks(range(len(x_ticks)))
+ax.set_xticklabels(x_ticks, rotation=45, ha='right')
+
+# 顯示圖表
+plt.show()
 
 
