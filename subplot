@@ -175,7 +175,85 @@ list1 = np.delete(list1, indices_to_delete).tolist()
 
 print(list1)
 
+cldf如下:
+SCAN LENS  RANGE
+0   SCAN6  M67  0.023
+1   SCAN6  M56  0.033
+2   SCAN6  M45  0.034
+3   SCAN6  M34  0.027
+4   SCAN6  M23  0.045
+5   SCAN6  M12  0.026
+6   SCAN5  M67   0.02
+7   SCAN5  M56  0.053
+8   SCAN5  M45  0.013
+9   SCAN5  M34   0.04
+10  SCAN5  M23  0.029
+11  SCAN5  M12  0.012
+12  SCAN3  M67  0.023
+13  SCAN3  M56  0.022
+14  SCAN3  M45  0.038
+15  SCAN3  M34  0.037
+16  SCAN3  M23  0.019
+17  SCAN3  M12  0.047
+18  SCAN4  M67  0.013
+19  SCAN4  M56  0.044
+20  SCAN4  M45  0.016
+21  SCAN4  M34  0.022
+22  SCAN4  M23  0.056
+23  SCAN4  M12  0.013
+24  SCAN2  M67  0.036
+25  SCAN2  M56   0.02
+26  SCAN2  M45  0.027
+27  SCAN2  M34   0.02
+28  SCAN2  M23  0.014
+29  SCAN2  M12  0.014
+30  SCAN1  M67  0.024
+31  SCAN1  M56  0.027
+32  SCAN1  M45  0.019
+33  SCAN1  M34  0.034
+34  SCAN1  M23  0.043
+35  SCAN1  M12  0.033
+cldf 的 scan.unique() = ['SCAN6' 'SCAN5' 'SCAN3' 'SCAN4' 'SCAN2' 'SCAN1']
+cldf 的 lens.unique() = ['M67' 'M56' 'M45' 'M34' 'M23' 'M12']
 
+用 range畫 a1.plot()及a1.scatter()畫在同一張
+x軸刻度要設置兩種刻度 刻度為擷取cldf的列資訊,表示如下
+Scan1	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
+Scan2	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
+Scan3	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
+Scan4	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
+Scan5	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
+Scan6	M1-M2
+	M2-M3
+	M3-M4
+	M4-M5
+	M5-M6
+	M6-M7
 
 
 
