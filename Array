@@ -1,0 +1,57 @@
+import numpy as np
+import pandas as pd
+
+# 假设有一个矩阵 matrix
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# 使用 pandas 的 DataFrame 函数进行转换
+dataframe = pd.DataFrame(matrix)
+
+print(dataframe)
+import numpy as np
+
+# 假設有一個矩陣 matrix
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# 要新增的列表
+new_list = [10, 11, 12]
+
+# 使用 column_stack 將列表新增到矩陣的右側
+new_matrix = np.column_stack([matrix, new_list])
+
+print(new_matrix)
+import numpy as np
+
+# 假設有一個矩陣 matrix
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# 要新增的列表
+new_list = [10, 11, 12]
+
+# 使用 vstack 將列表新增到矩陣的底部
+new_matrix = np.vstack([matrix, new_list])
+
+print(new_matrix)
+
+import numpy as np
+
+# 假設有三個列表 a、b、c
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]
+
+# 將列表轉換成NumPy數組
+matrix = np.array([a, b, c])
+
+# 進行合併
+result = np.concatenate((matrix, matrix), axis=1)  # 沿著列的方向合併
+
+print(result)
+
+
