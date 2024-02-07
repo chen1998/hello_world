@@ -13,10 +13,6 @@ print(dataframe)
 import numpy as np
 
 # 假設有一個矩陣 matrix
-matrix = np.array([[1, 2, 3],
-                   [4, 5, 6],
-                   [7, 8, 9]])
-
 # 要新增的列表
 new_list = [10, 11, 12]
 
@@ -54,4 +50,6 @@ result = np.concatenate((matrix, matrix), axis=1)  # 沿著列的方向合併
 
 print(result)
 
-
+col = [str(v/10) for v in  list(range(3670,-3680,-367)) if v !=0] 
+indexs = [str(v/10) for v in  list(range(4450,-4451,-445)) if v !=0]
+col為矩陣的列,indexs為矩陣的row,建立矩陣20*20的map0矩陣
