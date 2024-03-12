@@ -1,0 +1,19 @@
+import pandas as pd
+import os
+
+# 創建您的DataFrame
+data = {'A': [1, 2, 3], 'B': [4, 5, 6]}
+df = pd.DataFrame(data)
+
+# 檢查檔案是否存在
+file_exists = os.path.isfile('edge_df.csv')
+
+# 將DataFrame轉換為csv格式的字串
+csv_string = df.to_csv(header=False, index=False, line_terminator='\n')
+
+# 如果檔案存在，則將csv格式的字串附加到文件的最後一行；如果檔案不存在，則創建一個新的檔案並寫入數據
+mode = 'a' if file_exists else 'w'
+with open('edge_df.csv', mode) as f:
+    if not file_exists:  # 如果檔案不存在，寫入標題行
+        f.write(','.join(df.columns) + '\n')
+    f.write(csv_string)
